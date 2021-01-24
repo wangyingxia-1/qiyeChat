@@ -1,0 +1,4 @@
+解决方案：将HTMLTestRunner脚本的第631行的
+ print >> sys.stderr, '\nTime Elapsed: %s' % (self.stopTime-self.startTime)
+ 或print(sys.stderr, '\nTime Elapsed: %s' % (self.stopTime-self.startTime)) 修改为 
+print(sys.stderr.write('\nTime Elapsed: %s\n' % (self.stopTime - self.startTime))
